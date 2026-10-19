@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Received | TheBrawtalk Digital</title>
+    <!-- Automatic redirection fallback meta tag to route back to homepage after 5 seconds -->
+    <meta http-equiv="refresh" content="5;url=index.html">
+    <style>
+        :root {
+            --bg-dark: #070d12;
+            --card-bg: rgba(17, 28, 36, 0.85);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --accent-green: #10b981;
+            --accent-mint: #34d399;
+            --border-color: #1b2a32;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; min-height: 100vh; position: relative; display: flex; flex-direction: column; justify-content: space-between; }
+        
+        /* Universal Ambient Blurred Background Graphic System (15% Opacity + 8px Blur) */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('images/BG.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+            filter: blur(8px);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        header { background-color: rgba(17, 28, 36, 0.95); border-bottom: 1px solid var(--border-color); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; width: 100%; }
+        .logo-group { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+        .logo-icon { width: 40px; height: 40px; }
+        .logo-text { font-size: 1.4rem; font-weight: 700; background: linear-gradient(135deg, var(--accent-green), var(--accent-mint)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        nav a { color: var(--text-main); text-decoration: none; margin-left: 1.75rem; transition: color 0.3s; font-weight: 500; }
+        nav a:hover { color: var(--accent-green); }
+        
+        /* Success Card Core Layout styling */
+        .success-wrapper { flex-grow: 1; display: flex; align-items: center; justify-content: center; padding: 2rem 5%; }
+        .success-card { max-width: 550px; width: 100%; background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 3.5rem 2rem; text-align: center; backdrop-filter: blur(4px); position: relative; border-top: 3px solid var(--accent-green); }
+        
+        /* Animated Cybersecurity Shield Pulse radar elements */
+        .icon-container { width: 80px; height: 80px; margin: 0 auto 2rem; background: rgba(16, 185, 129, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid var(--accent-green); position: relative; }
+        .icon-container::after { content: ''; position: absolute; width: 100%; height: 100%; border-radius: 50%; border: 2px solid var(--accent-mint); opacity: 0; animation: radarPulse 2s infinite; }
+        .success-check { width: 35px; height: 35px; fill: var(--accent-mint); }
+        
+        .success-card h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 1rem; color: #fff; }
+        .success-card h1 span { background: linear-gradient(135deg, var(--accent-green), var(--accent-mint)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .success-card p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem; }
+        
+        /* Interactive redirection timeline indicators */
+        .redirect-notice { font-size: 0.9rem; color: var(--accent-mint); background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.15); padding: 0.5rem 1.5rem; border-radius: 50px; display: inline-flex; align-items: center; gap: 0.5rem; }
+        .spinner { width: 16px; height: 16px; border: 2px solid rgba(52, 211, 153, 0.2); border-top-color: var(--accent-mint); border-radius: 50%; animation: spin 1s linear infinite; }
+        
+        .home-fallback-link { display: block; margin-top: 1.5rem; color: var(--text-main); font-size: 0.95rem; text-decoration: underline; transition: color 0.2s; }
+        .home-fallback-link:hover { color: var(--accent-green); }
+
+        @keyframes radarPulse {
+            0% { transform: scale(1); opacity: 0.5; }
+            100% { transform: scale(1.4); opacity: 0; }
+        }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+        
+        footer { background-color: rgba(4, 8, 11, 0.95); text-align: center; padding: 2rem; color: var(--text-muted); border-top: 1px solid var(--border-color); width: 100%; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo-group">
+            <svg class="logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://w3.org">
+                <path d="M35 25h30v25c0 8.28-6.72 15-15 15s-15-6.72-15-15V25z" stroke="url(#logo-grad)" stroke-width="6" stroke-linecap="round"/>
+                <path d="M43 33v10m14-10v10M50 25v22" stroke="url(#logo-grad)" stroke-width="4" stroke-linecap="round"/>
+                <path d="M50 65v15m-15 0h30" stroke="url(#logo-grad)" stroke-width="6" stroke-linecap="round"/>
+                <path d="M25 40v5c0 13.8 11.2 25 25 25s25-11.2 25-25v-5" stroke="url(#logo-grad)" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+            <div class="logo-text">TheBrawtalk Digital</div>
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="training.html">Training</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="success-wrapper">
+        <div class="success-card">
+            <div class="icon-container">
+                <!-- Lock Shield Verification Vector Glyph Symbol -->
+                <svg class="success-check" viewBox="0 0 24 24" xmlns="http://w3.org">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+            </div>
+            
+            <h1>Transmission <span>Secure</span></h1>
+            <p>Thank you for reaching out to our advisory desk. Your corporate scope logs have been safely encrypted and routed to our response team. We will review your objectives and reply within 24 operational hours.</p>
+            
+            <div class="redirect-notice">
+                <div class="spinner"></div>
+                Redirecting to dashboard in <span id="countdown">5</span>s...
+            </div>
+            
+            <a href="index.html" class="home-fallback-link">Click here if you aren't redirected automatically</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TheBrawtalk Digital. All rights reserved. | <a href="privacy.html" style="color: var(--accent-mint); text-decoration: none;">Privacy Policy</a> | <a href="terms.html" style="color: var(--accent-mint); text-decoration: none;">Terms of Service</a></p>
+    </footer>
+
+    <!-- Countdown animation rendering controller script logic -->
+    <script>
+        let seconds = 5;
+        const countdownElement = document.getElementById('countdown');
+        const interval = setInterval(() => {
+            seconds--;
+            countdownElement.textContent = seconds;
+            if (seconds <= 0) {
+                clearInterval(interval);
+                window.location.href = "index.html";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

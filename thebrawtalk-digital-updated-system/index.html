@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | TheBrawtalk Digital - Cybersecurity & AI Consultancy</title>
+    <style>
+        :root {
+            --bg-dark: #070d12;
+            --card-bg: #111c24;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --accent-green: #10b981;
+            --accent-mint: #34d399;
+            --border-color: #1b2a32;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; }
+        header { background-color: rgba(17, 28, 36, 0.95); border-bottom: 1px solid var(--border-color); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 1.5rem; font-weight: 700; background: linear-gradient(135deg, var(--accent-green), var(--accent-mint)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        nav a { color: var(--text-main); text-decoration: none; margin-left: 2rem; transition: color 0.3s; font-weight: 500; }
+        nav a:hover, nav a.active { color: var(--accent-green); }
+        
+        .hero { padding: 8rem 5% 4rem; text-align: center; background: radial-gradient(circle at top, rgba(16,185,129,0.1), transparent 60%); }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1.5rem; line-height: 1.2; font-weight: 800; }
+        .hero h1 span { background: linear-gradient(135deg, var(--accent-green), var(--accent-mint)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.25rem; color: var(--text-muted); max-width: 800px; margin: 0 auto 2.5rem; }
+        .btn { display: inline-block; padding: 0.75rem 2rem; border-radius: 6px; font-weight: 600; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; border: none; cursor: pointer; }
+        .btn-primary { background: linear-gradient(135deg, var(--accent-green), var(--accent-mint)); color: #070d12; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4); }
+        
+        .slider-section { padding: 2rem 0; background-color: #091219; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); overflow: hidden; position: relative; }
+        .slider-track { display: flex; width: calc(300px * 10); animation: scrollTrack 25s linear infinite; gap: 20px; }
+        .slider-track:hover { animation-play-state: paused; }
+        .slide-item { width: 300px; height: 180px; flex-shrink: 0; border-radius: 8px; overflow: hidden; border: 2px solid var(--border-color); transition: border-color 0.3s; position: relative; }
+        .slide-item:hover { border-color: var(--accent-green); }
+        .slide-item img { width: 100%; height: 100%; object-fit: cover; }
+        .slide-caption { position: absolute; bottom: 0; left: 0; width: 100%; background: rgba(7, 13, 18, 0.85); padding: 0.5rem; font-size: 0.8rem; border-top: 1px solid var(--border-color); text-align: center; color: var(--accent-mint); font-weight: 600; }
+        @keyframes scrollTrack {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-320px * 5)); }
+        }
+
+        .features { padding: 5rem 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
+        .feature-card { background-color: var(--card-bg); border: 1px solid var(--border-color); padding: 2.5rem; border-radius: 8px; transition: border-color 0.3s; }
+        .feature-card:hover { border-color: var(--accent-green); }
+        .feature-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--accent-green); }
+        .feature-card p { color: var(--text-muted); }
+        
+        .about-section { padding: 6rem 5%; background-color: #0b141b; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
+        .about-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center; }
+        .about-text h2 { font-size: 2.5rem; margin-bottom: 1.5rem; color: #fff; }
+        .about-text h2 span { color: var(--accent-green); }
+        .about-text p { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1.1rem; }
+        .team-box { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 3rem; text-align: center; position: relative; }
+        .team-box::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(to right, var(--accent-green), var(--accent-mint)); }
+        .team-box h3 { font-size: 1.5rem; margin-bottom: 0.25rem; color: #fff; }
+        .team-box .title { color: var(--accent-mint); font-weight: 600; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; }
+        .team-box .bio { color: var(--text-muted); font-size: 0.95rem; }
+        
+        footer { background-color: #04080b; text-align: center; padding: 2rem; color: var(--text-muted); border-top: 1px solid var(--border-color); }
+        @media(max-width: 900px) { .about-container { grid-template-columns: 1fr; gap: 3rem; } }
+    </style>
+      <style>
+    :root {
+    --bg-dark: #070d12;
+    --card-bg: rgba(17, 28, 36, 0.85); /* 🌟 Semi-transparent so background peeks through */
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+    --accent-green: #10b981;
+    --accent-mint: #34d399;
+    --border-color: #1b2a32;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: var(--bg-dark); 
+    color: var(--text-main); 
+    line-height: 1.6; 
+    min-height: 100vh; 
+    position: relative; 
+}
+
+/* 🟢 PASTE THIS GLOBAL BACKGROUND LAYER INSTANTLY BELOW YOUR BODY RULE 🟢 */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/BG.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;      /* 🌟 Exact 15% Opacity */
+    filter: blur(8px);   /* 🌟 Soft Blur Layer for Clean Text Scanning contrast */
+    z-index: -1;         /* 🌟 Locks graphic completely behind layouts */
+    pointer-events: none;
+}
+</style>
+</head>
+<body>
+    <header>
+        <div class="logo">TheBrawtalk Digital</div>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="services.html">Services</a>
+            <a href="training.html">Training</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+            
+        </nav>
+    </header>
+
+
+    <section class="hero">
+        <h1>Secure the Future with <span>Intelligent Defense</span></h1>
+        <p>TheBrawtalk Digital bridges the gap between next-generation Artificial Intelligence and elite Cybersecurity architecture. We shield enterprise infrastructure while accelerating AI adoption safely.</p>
+        <a href="contact.html" class="btn btn-primary">Request Strategic Consultation</a>
+    </section>
+
+    <section class="slider-section">
+        <div class="slider-track">
+            <div class="slide-item">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=400&q=80" alt="Threat Defense Core">
+                <div class="slide-caption">Threat Defense Core</div>
+            </div>
+            <div class="slide-item">
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=400&q=80" alt="AI Solutions Cohort">
+                <div class="slide-caption">AI Solutions Cohort</div>
+            </div>
+            <div class="slide-item">
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=400&q=80" alt="Enterprise SIEM Ops">
+                <div class="slide-caption">Enterprise SIEM Ops</div>
+            </div>
+            <div class="slide-item">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80" alt="Corporate Upskilling">
+                <div class="slide-caption">Corporate Upskilling</div>
+            </div>
+            <div class="slide-item">
+                <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=400&q=80" alt="LLM Protection Guard">
+                <div class="slide-caption">LLM Protection Guard</div>
+            </div>
+            
+            <div class="slide-item">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=400&q=80" alt="Threat Defense Core">
+                <div class="slide-caption">Threat Defense Core</div>
+            </div>
+            <div class="slide-item">
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=400&q=80" alt="AI Solutions Cohort">
+                <div class="slide-caption">AI Solutions Cohort</div>
+            </div>
+            <div class="slide-item">
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=400&q=80" alt="Enterprise SIEM Ops">
+                <div class="slide-caption">Enterprise SIEM Ops</div>
+            </div>
+            <div class="slide-item">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80" alt="Corporate Upskilling">
+                <div class="slide-caption">Corporate Upskilling</div>
+            </div>
+            <div class="slide-item">
+                <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=400&q=80" alt="LLM Protection Guard">
+                <div class="slide-caption">LLM Protection Guard</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <h3>AI-Driven Security</h3>
+            <p>Automate threat mitigation and actively map digital vulnerabilities using custom adaptive algorithms before attackers strike.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Enterprise Consultancy</h3>
+            <p>Architect robust risk governance standards, secure cloud environments, and securely deploy private large language models.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Technical Training</h3>
+            <p>Empower your blue teams, developers, and corporate workforces with cutting-edge defensive security capabilities and AI engineering standards.</p>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>Our Story: Shaping <span>Secure Digital Ecosystems</span></h2>
+                <p>TheBrawtalk Digital was born out of a profound necessity in the modern enterprise landscape: the intersection where cutting-edge brand visibility, high-impact digital messaging, and ironclad technical architectures converge.</p>
+                <p>We began by analyzing how modern communication platforms operate, evolving dynamically into an elite consultancy and capacity-building agency. Today, we specialize in hardening corporate networks against sophisticated threat actors while engineering the guardrails needed to deploy private, high-performance artificial intelligence safely.</p>
+            </div>
+            
+            <div class="team-box">
+                <img src= "images/MD.png" alt="Kelvin Nduhiu - Managing Director" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-green); margin: 0 auto 1.5rem; display: block;">
+                <h3>Kelvin Nduhiu</h3>
+                <div class="title">Managing Director & Lead Strategist</div>
+                <p class="bio">Leveraging deep competencies in secure development lifecycles, advanced security operations monitoring, and multimedia content ecosystems. Kelvin guides the strategic technical vision of TheBrawtalk Digital—pioneering defensive AI upskilling architectures and continuous vulnerability management pipelines for forward-thinking organizations.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 TheBrawtalk Digital. All rights reserved. | <a href="privacy.html" style="color: var(--accent-mint); text-decoration: none;">Privacy Policy</a> | <a href="terms.html" style="color: var(--accent-mint); text-decoration: none;">Terms of Service</a></p>
+    </footer>
+</body>
+</html>

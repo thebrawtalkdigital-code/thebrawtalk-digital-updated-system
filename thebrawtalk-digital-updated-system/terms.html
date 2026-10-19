@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | TheBrawtalk Digital</title>
+    <style>
+        :root {
+            --bg-dark: #070d12;
+            --card-bg: rgba(17, 28, 36, 0.85);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --accent-green: #10b981;
+            --accent-mint: #34d399;
+            --border-color: #1b2a32;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; min-height: 100vh; position: relative; }
+        
+        /* Fixed Background Graphic System (15% Opacity + 8px Blur) */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('images/BG.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+            filter: blur(8px);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        header { background-color: rgba(17, 28, 36, 0.95); border-bottom: 1px solid var(--border-color); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .logo-group { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+        .logo-icon { width: 40px; height: 40px; }
+        .logo-text { font-size: 1.4rem; font-weight: 700; background: linear-gradient(135deg, var(--accent-green), var(--accent-mint)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        nav a { color: var(--text-main); text-decoration: none; margin-left: 1.75rem; transition: color 0.3s; font-weight: 500; }
+        nav a:hover, nav a.active { color: var(--accent-green); }
+        
+        .terms-container { max-width: 800px; margin: 5rem auto; padding: 3rem; background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; backdrop-filter: blur(4px); }
+        .terms-container h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: #fff; }
+        .terms-container h1 span { background: linear-gradient(135deg, var(--accent-green), var(--accent-mint)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .date { color: var(--accent-mint); font-weight: 600; margin-bottom: 2rem; font-size: 0.95rem; }
+        .terms-content h2 { font-size: 1.4rem; margin: 2rem 0 1rem; color: #fff; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; }
+        .terms-content p { color: var(--text-muted); margin-bottom: 1.25rem; font-size: 1rem; text-align: justify; }
+        .terms-content ul { color: var(--text-muted); margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .terms-content ul li { margin-bottom: 0.5rem; }
+        
+        footer { background-color: rgba(4, 8, 11, 0.95); text-align: center; padding: 2rem; color: var(--text-muted); border-top: 1px solid var(--border-color); margin-top: 6rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo-group">
+            <svg class="logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://w3.org">
+                <path d="M35 25h30v25c0 8.28-6.72 15-15 15s-15-6.72-15-15V25z" stroke="url(#logo-grad)" stroke-width="6" stroke-linecap="round"/>
+                <path d="M43 33v10m14-10v10M50 25v22" stroke="url(#logo-grad)" stroke-width="4" stroke-linecap="round"/>
+                <path d="M50 65v15m-15 0h30" stroke="url(#logo-grad)" stroke-width="6" stroke-linecap="round"/>
+                <path d="M25 40v5c0 13.8 11.2 25 25 25s25-11.2 25-25v-5" stroke="url(#logo-grad)" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+            <div class="logo-text">TheBrawtalk Digital</div>
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="training.html">Training</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="terms-container">
+        <h1><span>Terms of Service</span></h1>
+        <div class="date">Last Updated: October 2026</div>
+        
+        <div class="terms-content">
+            <p>Welcome to <strong>TheBrawtalk Digital</strong> ("we," "us," or "our"). These Terms of Service ("Terms") govern your use of our website, consultancy services, and any related capacity-building training frameworks (collectively, the "Service"). By accessing or using our Service, you agree to be bound by these Terms. If you do not agree, please do not use our Service.</p>
+
+            <h2>1. Eligibility</h2>
+            <p>You must be at least 18 years old to use our Service. By interfacing with our systems or requesting consultation, you represent and warrant that you have the legal capacity to enter into this binding agreement under applicable data protection and corporate laws.</p>
+
+            <h2>2. Use of the Service</h2>
+            <p>You agree to use the Service only for lawful purposes and in accordance with these Terms. You explicitly agree not to use the Service to:</p>
+            <ul>
+                <li>Violate any applicable local, regional, or international laws or regulations.</li>
+                <li>Conduct unauthorized system probing, send spam, or engage in malicious communication.</li>
+                <li>Distribute malware, ransomware, reverse-engineering exploits, or other harmful digital payloads.</li>
+                <li>Defame, harass, or interfere with our technical advisory operations.</li>
+                <li>Attempt to gain unauthorized access to our corporate network infrastructure, web servers, or vendor databases.</li>
+            </ul>
+
+            <h2>3. Intellectual Property</h2>
+            <p>All content, original design stylesheets, logos, vector icons, and instructional materials on our website are the exclusive intellectual property of TheBrawtalk Digital, our licensors, or project partners. You may not reproduce, modify, distribute, or publicly exhibit any structural content from our Service without our prior written consent.</p>
+
+            <h2>4. Privacy</h2>
+            <p>Your use of the Service is securely governed by our Privacy Policy, which outlines our data collection pipelines and adherence to the Kenya Data Protection Act, 2019 (ODPC). By interacting with our Service, you consent to all information handling practices defined inside our official Privacy Policy.</p>
+
+            <h2>5. User Accounts & Request Portals</h2>
+            <p>When utilizing our technical request portals or scheduling consultation slots, you must provide accurate, current, and complete corporate domain data. You remain completely responsible for safeguarding the integrity of any dynamic tokens or session access points used, and must notify our operations panel immediately if you suspect unauthorized network activity.</p>
+
+            <h2>6. Limitation of Liability</h2>
+            <p>To the maximum extent permitted under applicable law, TheBrawtalk Digital shall not be held liable for any indirect, incidental, special, or consequential digital damage (including system downtime, business interruption, or mitigation data losses) arising from your use of, or inability to interface with, our web service. We do not warrant that our digital interface will remain uninterrupted or entirely error-free.</p>
+
+            <h2>7. Indemnification</h2>
+            <p>You agree to indemnify, defend, and hold harmless TheBrawtalk Digital, its lead strategists, analysts, and engineering affiliates from any corporate third-party claims, liabilities, system damages, or asset losses arising straight out of your misuse of our Service, or any breach of these binding Terms.</p>
+
+            <h2>8. Third-Party Links</h2>
+            <p>Our Service includes active references and hyperlinked nodes to external social networks (including Instagram and TikTok). We maintain no operational governance over their content or tracking protocols. Navigating to external platforms rests entirely at your own legal risk.</p>
+
+            <h2>9. Termination</h2>
+            <p>We reserve the right to temporarily suspend, block, or completely terminate your access to our Service or technical form intake arrays at any time, without prior notice, for executing malicious activities or violating any core clause outlined inside these Terms.</p>
+
+            <h2>10. Governing Law</h2>
+            <p>These Terms are strictly governed by and construed in accordance with the laws of Kenya. Any legal actions, disputes, or structural enforcement procedures arising out of your use of the Service will be handled under the exclusive jurisdiction of the competent courts in Kenya.</p>
+
+            <h2>11. Modifications</h2>
+            <p>We reserve the right to modify or replace these Terms at any time to reflect structural changes in our security operations, advisory models, or applicable legal laws. Updated documents will become effective immediately upon posting to this URL node.</p>
+
+            <h2>12. Contact Us</h2>
+            <p>If you have any questions, compliance queries, or operational concerns regarding these Terms, please reach out to us directly via our verified communication tracks:<br>
+            <strong>Email:</strong> thebrawtalkdigital@gmail.com<br>
+            <strong>WhatsApp Mobile:</strong> +254 724 974 391</p>
+        </div>
+    </main>
+
+    <footer>

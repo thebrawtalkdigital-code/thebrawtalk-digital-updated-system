@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | TheBrawtalk Digital</title>
+    <style>
+        :root {
+            --bg-dark: #070d12;
+            --card-bg: rgba(17, 28, 36, 0.85);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --accent-green: #10b981;
+            --accent-mint: #34d399;
+            --border-color: #1b2a32;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; min-height: 100vh; position: relative; }
+        
+        /* Fixed Background Graphic Layer (10% Opacity + 8px Blur) */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('image_nEMtQW.png');
+            background-repeat: repeat;
+            background-size: 500px;
+            opacity: 0.10;
+            filter: blur(8px);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        header { background-color: rgba(17, 28, 36, 0.95); border-bottom: 1px solid var(--border-color); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .logo-group { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+        .logo-icon { width: 40px; height: 40px; }
+        .logo-text { font-size: 1.4rem; font-weight: 700; background: linear-gradient(135deg, var(--accent-green), var(--accent-mint)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        nav a { color: var(--text-main); text-decoration: none; margin-left: 1.75rem; transition: color 0.3s; font-weight: 500; }
+        nav a:hover, nav a.active { color: var(--accent-green); }
+        
+        .contact-section { padding: 5rem 5%; max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+        .contact-info h1 { font-size: 2.75rem; margin-bottom: 1.5rem; }
+        .contact-info p { color: var(--text-muted); margin-bottom: 2rem; }
+        
+        .info-details { margin-top: 2.5rem; }
+        .info-item { margin-bottom: 1.75rem; display: flex; flex-direction: column; }
+        .info-item h4 { color: var(--accent-green); font-size: 1.1rem; margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.5rem; }
+        .info-item a { color: var(--text-main); text-decoration: none; transition: color 0.2s; font-size: 1.05rem; width: fit-content; }
+        .info-item a:hover { color: var(--accent-mint); }
+        
+        /* Social Media Icons Styling Group */
+        .social-links { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem; }
+        .social-item { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--text-main); transition: color 0.2s; font-size: 1.05rem; }
+        .social-item:hover { color: var(--accent-mint); }
+        .social-icon { width: 20px; height: 20px; fill: currentColor; }
+
+        .contact-form-box { background-color: var(--card-bg); border: 1px solid var(--border-color); padding: 3rem; border-radius: 8px; backdrop-filter: blur(4px); }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; color: #fff; font-size: 0.95rem; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.75rem; background-color: var(--bg-dark); border: 1px solid var(--border-color); border-radius: 6px; color: var(--text-main); font-family: inherit; font-size: 1rem; transition: border-color 0.3s; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--accent-green); }
+        
+        .btn { display: inline-block; width: 100%; padding: 0.75rem 2rem; border-radius: 6px; font-weight: 600; text-decoration: none; border: none; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+        .btn-primary { background: linear-gradient(135deg, var(--accent-green), var(--accent-mint)); color: #070d12; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4); }
+        
+        footer { background-color: rgba(4, 8, 11, 0.95); text-align: center; padding: 2rem; color: var(--text-muted); border-top: 1px solid var(--border-color); margin-top: 4rem; }
+        @media(max-width: 800px) { .contact-section { grid-template-columns: 1fr; gap: 3rem; } }
+    </style>
+    <style>
+    :root {
+    --bg-dark: #070d12;
+    --card-bg: rgba(17, 28, 36, 0.85); /* 🌟 Semi-transparent so background peeks through */
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+    --accent-green: #10b981;
+    --accent-mint: #34d399;
+    --border-color: #1b2a32;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: var(--bg-dark); 
+    color: var(--text-main); 
+    line-height: 1.6; 
+    min-height: 100vh; 
+    position: relative; 
+}
+
+/* 🟢 PASTE THIS GLOBAL BACKGROUND LAYER INSTANTLY BELOW YOUR BODY RULE 🟢 */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/BG.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;      /* 🌟 Exact 15% Opacity */
+    filter: blur(8px);   /* 🌟 Soft Blur Layer for Clean Text Scanning contrast */
+    z-index: -1;         /* 🌟 Locks graphic completely behind layouts */
+    pointer-events: none;
+}
+</style>
+
+
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo-group">
+            <svg class="logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://w3.org">
+                <defs>
+                    <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#10b981" />
+                        <stop offset="100%" stop-color="#34d399" />
+                    </linearGradient>
+                </defs>
+                <path d="M35 25h30v25c0 8.28-6.72 15-15 15s-15-6.72-15-15V25z" stroke="url(#logo-grad)" stroke-width="6" stroke-linecap="round"/>
+                <path d="M43 33v10m14-10v10M50 25v22" stroke="url(#logo-grad)" stroke-width="4" stroke-linecap="round"/>
+                <path d="M50 65v15m-15 0h30" stroke="url(#logo-grad)" stroke-width="6" stroke-linecap="round"/>
+                <path d="M25 40v5c0 13.8 11.2 25 25 25s25-11.2 25-25v-5" stroke="url(#logo-grad)" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+            <div class="logo-text">TheBrawtalk Digital</div>
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="training.html">Training</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <section class="contact-section">
+        <div class="contact-info">
+            <h1>Connect with Our Consultants</h1>
+            <p>Ready to deploy fortified security architectures or upskill your technology workforce? Outline your project objectives to request an exploration session.</p>
+            
+            <div class="info-details">
+                <!-- WhatsApp Integration -->
+                <div class="info-item">
+                    <h4>
+                        <svg style="width:18px; height:18px; fill:currentColor;" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.625 1.451 5.432.003 9.851-4.382 9.854-9.802.001-2.624-1.022-5.09-2.885-6.957C16.42 1.98 13.96 .957 11.4 1.03c-5.432.002-9.853 4.384-9.856 9.804-.001 2.08.544 4.116 1.579 5.894l-1.037 3.784 3.961-1.038z"/></svg>
+                        Secure Mobile Intake
+                    </h4>
+                    <a href="https://wa.me" target="_blank">+254 724 974 391</a>
+                </div>
+
+                <!-- Email Integration -->
+                <div class="info-item">
+                    <h4>
+                        <svg style="width:18px; height:18px; fill:currentColor;" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.77l10 8.103 10-8.103v11.77h-20z"/></svg>
+                        Direct Engineering Channels
+                    </h4>
+                    <a href="mailto:thebrawtalkdigital@gmail.com">thebrawtalkdigital@gmail.com</a>
+                </div>
+
+                <!-- Embedded Network Profiles -->
+                <div class="info-item">
+                    <h4>Verified Media Frameworks</h4>
+                    <div class="social-links">
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/thebrawtalkdigital/" target="_blank" class="social-item">
+                            <svg class="social-icon" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            thebrawtalkdigital
+                        </a>
+                        <!-- TikTok -->
+                        <a href="https://www.tiktok.com/@simplykelv" target="_blank" class="social-item">
+                            <svg class="social-icon"  viewBox="0 0 24 24"> <path d="M12.5 2.5c-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5c1.38 0 2.5-1.12 2.5-2.5s-1.12-2.5-2.5-2.5zm0 4c-.83 0-1.5-.67-1.5-1.5S11.67 3 12.5 3s1.5.67 1.5 1.5S13.33 6.5 12.5 6.5zM19 7h-3v10h3V7zm-4 0h-3v10h3V7zm-4 0H8v10h3V7zm-4 0H4v10h3V7z"/></svg>
+                            simplykelv
+                        </a>
+                    </div>
+                </div> 
+                
+            </div>
+        </div>
+        <div class="contact-form-box">
+    <!-- 1. Place the Formspree URL exactly on this line below, replacing the old form tag -->
+    <!--  REMEMBER: Replace 'your_formspree_id' with your actual 8-character ID code from your dashboard -->
+    <form action= "https://formspree.io/f/mnpjwlyb" method="POST">
+        
+        <!-- 2. This hidden line forces Formspree to automatically load your success screen instead of their default page -->
+        <input type="hidden" name="_next" value="success.html">
+        
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <!-- Added name="name" attribute for Formspree mapping -->
+            <input type="text" id="name" name="name" required placeholder="Kelvin Nduhiu">
+        </div>
+        
+        <div class="form-group">
+            <label for="domain">Target Enterprise Domain</label>
+            <!-- Added name="domain" attribute for Formspree mapping -->
+            <input type="url" id="domain" name="domain" placeholder="https://example.com">
+        </div>
+        
+        <div class="form-group">
+            <label for="scope">Engagement Target</label>
+            <!-- Added name="engagement_target" attribute for Formspree mapping -->
+            <select id="scope" name="engagement_target">
+                <option value="consultancy">AI Security Integration Architecture</option>
+                <option value="pentest">Advanced Infrastructure Penetration Auditing</option>
+                <option value="soc-training">SOC Capacity Training Tracks</option>
+                <option value="ai-training">Secure AI Engineering Tracks</option>
+                <option value="others">Others</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="message">Engagement Scope Details</label>
+            <!-- Added name="message_details" attribute for Formspree mapping -->
+            <textarea id="message" name="message_details" rows="4" required placeholder="Describe your architectural scope or training requirements..."></textarea>
+        </div>
+        
+        <!-- Anti-Spam Hidden Honeypot Field -->
+        <input type="text" name="_gotcha" style="display:none">
+        
+        <button type="submit" class="btn btn-primary">Submit Secure Request</button>
+    </form>
+</div>
+    </section>
+    <footer>
+        <p>&copy; 2026 TheBrawtalk Digital. All rights reserved. | <a href="privacy.html" style="color: var(--accent-mint); text-decoration: none;">Privacy Policy</a> | <a href="terms.html" style="color: var(--accent-mint); text-decoration: none;">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
+                
+                            
+

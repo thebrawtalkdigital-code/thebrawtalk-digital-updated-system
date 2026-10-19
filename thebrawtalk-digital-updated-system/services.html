@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | TheBrawtalk Digital - Cybersecurity & AI Consultancy</title>
+    <style>
+        :root {
+            --bg-dark: #070d12;
+            --card-bg: rgba(17, 28, 36, 0.85);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --accent-green: #10b981;
+            --accent-mint: #34d399;
+            --border-color: #1b2a32;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; min-height: 100vh; position: relative; }
+        
+        /* Universal Ambient Blurred Background Graphic System (10% Opacity + 8px Blur) */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('image_nEMtQW.png');
+            background-repeat: repeat;
+            background-size: 500px;
+            opacity: 0.10;
+            filter: blur(8px);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        header { background-color: rgba(17, 28, 36, 0.95); border-bottom: 1px solid var(--border-color); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .logo-group { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+        .logo-icon { width: 40px; height: 40px; }
+        .logo-text { font-size: 1.4rem; font-weight: 700; background: linear-gradient(135deg, var(--accent-green), var(--accent-mint)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        nav a { color: var(--text-main); text-decoration: none; margin-left: 1.75rem; transition: color 0.3s; font-weight: 500; }
+        nav a:hover, nav a.active { color: var(--accent-green); }
+        
+        .page-title { padding: 5rem 5% 2rem; text-align: center; max-width: 800px; margin: 0 auto; }
+        .page-title h1 { font-size: 2.75rem; margin-bottom: 1rem; }
+        .page-title h1 span { background: linear-gradient(135deg, var(--accent-green), var(--accent-mint)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .page-title p { color: var(--text-muted); font-size: 1.1rem; }
+        
+        .services-grid { padding: 2rem 5% 5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 2.5rem; max-width: 1200px; margin: 0 auto; }
+        .service-box { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 3rem; position: relative; overflow: hidden; backdrop-filter: blur(4px); transition: border-color 0.3s, transform 0.3s; }
+        .service-box:hover { border-color: var(--accent-green); transform: translateY(-3px); }
+        .service-box::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: linear-gradient(to bottom, var(--accent-green), var(--accent-mint)); }
+        
+        .service-box h2 { font-size: 1.75rem; margin-bottom: 1.25rem; color: #fff; }
+        .service-box p { color: var(--text-muted); margin-bottom: 1.5rem; }
+        .bullet-list { list-style: none; }
+        .bullet-list li { position: relative; padding-left: 1.5rem; margin-bottom: 0.75rem; color: var(--text-main); font-size: 0.95rem; }
+        .bullet-list li::before { content: "▹"; position: absolute; left: 0; color: var(--accent-green); font-weight: bold; }
+        
+        footer { background-color: rgba(4, 8, 11, 0.95); text-align: center; padding: 2rem; color: var(--text-muted); border-top: 1px solid var(--border-color); margin-top: 4rem; }
+        @media(max-width: 500px) { .services-grid { grid-template-columns: 1fr; } }
+    </style>
+      <style>
+    :root {
+    --bg-dark: #070d12;
+    --card-bg: rgba(17, 28, 36, 0.85); /* 🌟 Semi-transparent so background peeks through */
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+    --accent-green: #10b981;
+    --accent-mint: #34d399;
+    --border-color: #1b2a32;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: var(--bg-dark); 
+    color: var(--text-main); 
+    line-height: 1.6; 
+    min-height: 100vh; 
+    position: relative; 
+}
+
+/* 🟢 PASTE THIS GLOBAL BACKGROUND LAYER INSTANTLY BELOW YOUR BODY RULE 🟢 */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   background-image: url('images/BG.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;      /* 🌟 Exact 15% Opacity */
+    filter: blur(8px);   /* 🌟 Soft Blur Layer for Clean Text Scanning contrast */
+    z-index: -1;         /* 🌟 Locks graphic completely behind layouts */
+    pointer-events: none;
+}
+</style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo-group">
+            <svg class="logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://w3.org">
+                <defs>
+                    <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#10b981" />
+                        <stop offset="100%" stop-color="#34d399" />
+                    </linearGradient>
+                </defs>
+                <path d="M35 25h30v25c0 8.28-6.72 15-15 15s-15-6.72-15-15V25z" stroke="url(#logo-grad)" stroke-width="6" stroke-linecap="round"/>
+                <path d="M43 33v10m14-10v10M50 25v22" stroke="url(#logo-grad)" stroke-width="4" stroke-linecap="round"/>
+                <path d="M50 65v15m-15 0h30" stroke="url(#logo-grad)" stroke-width="6" stroke-linecap="round"/>
+                <path d="M25 40v5c0 13.8 11.2 25 25 25s25-11.2 25-25v-5" stroke="url(#logo-grad)" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+            <div class="logo-text">TheBrawtalk Digital</div>
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html" class="active">Services</a>
+            <a href="training.html">Training</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="page-title">
+        <h1>Our Expert <span>Consultancy Solutions</span></h1>
+        <p>Enterprise core solutions designed to protect vital data frameworks, harden intelligent systems, and drive secure digital transformation.</p>
+    </div>
+
+    <section class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-box">
+            <h2>AI Integration & LLM Security</h2>
+            <p>Deploy automated AI models inside your corporate workspace safely. We build advanced validation barriers around internal parameters to stop prompts from exposing sensitive data.</p>
+            <ul class="bullet-list">
+                <li>Prompt Injection Protections & Core Model Hardening</li>
+                <li>Secure Enterprise Vector Database Integration Parameters</li>
+                <li>Automated Data Leakage Mitigation & PII Masking Controls</li>
+            </ul>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-box">
+            <h2>Advanced Penetration Testing</h2>
+            <p>Simulate sophisticated, real-world attack vectors to identify and remediate architectural flaws across your network infrastructure before malicious actors find them.</p>
+            <ul class="bullet-list">
+                <li>Cloud and Web Application Vulnerability Simulations</li>
+                <li>Comprehensive Internal Infrastructure Auditing</li>
+                <li>API Architecture Mapping & Secure Endpoint Verification</li>
+            </ul>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-box">
+            <h2>Managed Detection & Response</h2>
+            <p>Scale up your infrastructure logging analytics. We implement tracking metrics designed to discover malicious actions, minimize response windows, and preserve data integrity.</p>
+            <ul class="bullet-list">
+                <li>24/7 Security Operations Center (SOC) Engineering Guidance</li>
+                <li>SIEM Log Infrastructure Tuning & Behavioral Baseline Auditing</li>
+                <li>Incident Containment Drills & Forensic Preservation Strategies</li>
+            </ul>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-box">
+            <h2>Governance, Risk & Compliance</h2>
+            <p>Align technical controls with critical regulatory standards. We help organizations establish strong asset matrices that pass audits smoothly.</p>
+            <ul class="bullet-list">
+                <li>Kenya Data Protection Act (ODPC) Structural Readiness Auditing</li>
+                <li>ISO/IEC 27001 Annex A & NIST Core Controls Mapping</li>
+                <li>Third-Party Vendor Risk Matrix Verification</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 TheBrawtalk Digital. All rights reserved. | <a href="privacy.html" style="color: var(--accent-mint); text-decoration: none;">Privacy Policy</a> | <a href="terms.html" style="color: var(--accent-mint); text-decoration: none;">Terms of Service</a></p>
+    </footer>
+</body>
+</html>

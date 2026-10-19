@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training | TheBrawtalk Digital - Cybersecurity & AI Consultancy</title>
+    <style>
+        :root {
+            --bg-dark: #070d12;
+            --card-bg: rgba(17, 28, 36, 0.85);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --accent-green: #10b981;
+            --accent-mint: #34d399;
+            --border-color: #1b2a32;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; min-height: 100vh; position: relative; }
+        
+        /* Universal Ambient Blurred Background Graphic System (10% Opacity + 8px Blur) */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('image_nEMtQW.png');
+            background-repeat: repeat;
+            background-size: 500px;
+            opacity: 0.10;
+            filter: blur(8px);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        header { background-color: rgba(17, 28, 36, 0.95); border-bottom: 1px solid var(--border-color); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .logo-group { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+        .logo-icon { width: 40px; height: 40px; }
+        .logo-text { font-size: 1.4rem; font-weight: 700; background: linear-gradient(135deg, var(--accent-green), var(--accent-mint)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        nav a { color: var(--text-main); text-decoration: none; margin-left: 1.75rem; transition: color 0.3s; font-weight: 500; }
+        nav a:hover, nav a.active { color: var(--accent-green); }
+        
+        .page-title { padding: 5rem 5% 2rem; text-align: center; max-width: 800px; margin: 0 auto; }
+        .page-title h1 { font-size: 2.75rem; margin-bottom: 1rem; }
+        .page-title h1 span { background: linear-gradient(135deg, var(--accent-green), var(--accent-mint)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .page-title p { color: var(--text-muted); font-size: 1.1rem; }
+        
+        .tracks-container { padding: 2rem 5% 5rem; max-width: 1000px; margin: 0 auto; }
+        .track-card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 2.5rem; margin-bottom: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; backdrop-filter: blur(4px); transition: border-color 0.3s, transform 0.3s; }
+        .track-card:hover { border-color: var(--accent-green); transform: translateY(-2px); }
+        
+        .track-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; }
+        .track-title h2 { font-size: 1.75rem; color: #fff; }
+        .track-badge { background-color: rgba(16, 185, 129, 0.1); color: var(--accent-green); padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; border: 1px solid rgba(16, 185, 129, 0.3); }
+        .track-details { margin-bottom: 1.5rem; color: var(--text-muted); font-size: 1rem; }
+        
+        .syllabus-preview { background-color: rgba(7, 13, 18, 0.5); padding: 1.25rem; border-radius: 6px; border: 1px solid var(--border-color); }
+        .syllabus-preview h4 { color: var(--accent-mint); font-size: 1rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .syllabus-preview ul { list-style: square inside; color: var(--text-main); font-size: 0.95rem; }
+        .syllabus-preview ul li { margin-bottom: 0.35rem; }
+        
+        footer { background-color: rgba(4, 8, 11, 0.95); text-align: center; padding: 2rem; color: var(--text-muted); border-top: 1px solid var(--border-color); margin-top: 4rem; }
+        @media(max-width: 650px) { .track-header { flex-direction: column; gap: 0.75rem; } }
+    </style>
+      <style>
+    :root {
+    --bg-dark: #070d12;
+    --card-bg: rgba(17, 28, 36, 0.85); /* 🌟 Semi-transparent so background peeks through */
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+    --accent-green: #10b981;
+    --accent-mint: #34d399;
+    --border-color: #1b2a32;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: var(--bg-dark); 
+    color: var(--text-main); 
+    line-height: 1.6; 
+    min-height: 100vh; 
+    position: relative; 
+}
+
+/* 🟢 PASTE THIS GLOBAL BACKGROUND LAYER INSTANTLY BELOW YOUR BODY RULE 🟢 */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   background-image: url('images/BG.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;      /* 🌟 Exact 15% Opacity */
+    filter: blur(8px);   /* 🌟 Soft Blur Layer for Clean Text Scanning contrast */
+    z-index: -1;         /* 🌟 Locks graphic completely behind layouts */
+    pointer-events: none;
+}
+</style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo-group">
+            <svg class="logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://w3.org">
+                <defs>
+                    <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#10b981" />
+                        <stop offset="100%" stop-color="#34d399" />
+                    </linearGradient>
+                </defs>
+                <path d="M35 25h30v25c0 8.28-6.72 15-15 15s-15-6.72-15-15V25z" stroke="url(#logo-grad)" stroke-width="6" stroke-linecap="round"/>
+                <path d="M43 33v10m14-10v10M50 25v22" stroke="url(#logo-grad)" stroke-width="4" stroke-linecap="round"/>
+                <path d="M50 65v15m-15 0h30" stroke="url(#logo-grad)" stroke-width="6" stroke-linecap="round"/>
+                <path d="M25 40v5c0 13.8 11.2 25 25 25s25-11.2 25-25v-5" stroke="url(#logo-grad)" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+            <div class="logo-text">TheBrawtalk Digital</div>
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="training.html" class="active">Training</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="page-title">
+        <h1>Capabilities & <span>Training Tracks</span></h1>
+        <p>Interactive upskilling pathways managed by seasoned security analysts and artificial intelligence engineers to transform your team into a strong security asset.</p>
+    </div>
+
+    <section class="tracks-container">
+        <!-- Track 1 -->
+        <div class="track-card">
+            <div class="track-header">
+                <div class="track-title">
+                    <h2>Advanced SOC Analyst Training</h2>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem;">Target: Corporate blue teams, IT staff, and infrastructure managers</p>
+                </div>
+                <span class="track-badge">5 Days Intensive</span>
+            </div>
+            <div class="track-details">
+                <p>Equip your technical teams to prevent, detect, and respond to cyber attacks. This hands-on track focuses on reinforcing infrastructure control networks, parsing security data, and orchestrating modern threat intelligence workflows.</p>
+            </div>
+            <div class="syllabus-preview">
+                <h4>Core Modules Covered:</h4>
+                <ul>
+                    <li>Threat Monitoring & SIEM Log Parsing Strategies</li>
+                    <li>Live Incident Handling, Memory Forensics & Containment Drills</li>
+                    <li>Vulnerability Tracking & CIS System Hardening Playbooks</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Track 2 -->
+        <div class="track-card">
+            <div class="track-header">
+                <div class="track-title">
+                    <h2>Secure AI Engineering & Development</h2>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem;">Target: Software Engineers, System Architects, and Data Teams</p>
+                </div>
+                <span class="track-badge">3 Days Intensive</span>
+            </div>
+            <div class="track-details">
+                <p>Train software engineering cohorts on modern parameters required to construct robust AI automation stacks. Learn how to secure the AI integration lifecycle, mitigate algorithmic vulnerabilities, and protect intellectual property from manipulation.</p>
+            </div>
+            <div class="syllabus-preview">
+                <h4>Core Modules Covered:</h4>
+                <ul>
+                    <li>Python-based Defensive AI Engineering Ecosystems</li>
+                    <li>OWASP Top 10 Protections for Large Language Model Pipelines</li>
+                    <li>Access Token Sandboxing & Secure Multi-Tenant Integrations</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 TheBrawtalk Digital. All rights reserved. | <a href="privacy.html" style="color: var(--accent-mint); text-decoration: none;">Privacy Policy</a> | <a href="terms.html" style="color: var(--accent-mint); text-decoration: none;">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
